@@ -356,12 +356,12 @@ textarea.input {
 .nav-logo .logo {
   display: inline-block;
   line-height: 70px;
-  height: 70px;
+  height: 108px;
 }
 
 .nav-logo .logo>img {
   width: 100%;
-  max-height: 70px;
+  max-height: 115px;
 }
 
 /*----------------------------*\

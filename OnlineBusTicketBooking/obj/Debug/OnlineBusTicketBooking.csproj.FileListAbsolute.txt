@@ -84,7 +84,6 @@ E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Microsoft.AI.DependencyCol
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Microsoft.AI.WindowsServer.xml
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Microsoft.AI.Web.xml
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\obj\Debug\OnlineBusTicketBooking.csprojAssemblyReference.cache
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\obj\Debug\OnlineBusTicketBooking.csproj.CoreCompileInputs.cache
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\obj\Debug\OnlineBusTicketBooking.csproj.CopyComplete
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\obj\Debug\OnlineBusTicketBooking.dll

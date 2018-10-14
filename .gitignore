@@ -5,3 +5,4 @@
 /.vs/BusTicketBooking/v15/Server/sqlite3
 /OnlineBusTicketBooking/bin/roslyn
 /.vs
+/OnlineBusTicketBooking/obj/Debug/OnlineBusTicketBooking.csprojAssemblyReference.cache

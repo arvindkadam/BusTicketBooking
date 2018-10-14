@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BusTicketBookingDBModelStoreContainer" CdmEntityContainer="BusTicketBookingDBEntities">
+    <EntitySetMapping Name="USER_ADDRESS">
+      <EntityTypeMapping TypeName="BusTicketBookingDBModel.USER_ADDRESS">
+        <MappingFragment StoreEntitySet="USER_ADDRESS">
+          <ScalarProperty Name="USER_ADDRESS_ID" ColumnName="USER_ADDRESS_ID" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_TYPE">
+      <EntityTypeMapping TypeName="BusTicketBookingDBModel.USER_TYPE">
+        <MappingFragment StoreEntitySet="USER_TYPE">
+          <ScalarProperty Name="USER_TYPE_ID" ColumnName="USER_TYPE_ID" />
+          <ScalarProperty Name="USER_TYPE_VALUE" ColumnName="USER_TYPE_VALUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="BusTicketBookingDBModel.USER">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="USER_TYPE_ID" ColumnName="USER_TYPE_ID" />
+          <ScalarProperty Name="USER_ADDRESS_ID" ColumnName="USER_ADDRESS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

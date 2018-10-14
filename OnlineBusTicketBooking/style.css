@@ -307,7 +307,7 @@ background-color: #00aeef;
 	opacity: 1
 }
 .overlay {
-  background: -webkit-linear-gradient(transparent 57%, rgba(0,0,0,1) 100%); /* Chrome 10+, Saf5.1+ */
+  /*background: -webkit-linear-gradient(transparent 57%, rgba(0,0,0,1) 100%); /* Chrome 10+, Saf5.1+ */*/
   background:    -moz-linear-gradient(transparent 57%, rgba(0,0,0,1) 100%); /* FF1.6+ */
   background:     -ms-linear-gradient(transparent 57%, rgba(0,0,0,1) 100%); /* IE10 */
   background:      -o-linear-gradient(transparent 57%, rgba(0,0,0,1) 100%); /* Opera 11.10+ */

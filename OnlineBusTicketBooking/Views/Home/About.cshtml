@@ -1,7 +1,21 @@
-﻿@{
+﻿@model OnlineBusTicketBooking.Models.UserViewModel
+
+@{
     ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+@if(Model != null)
+{
+    <ul>
+        <li>
+            User Infromation
+        </li>
+        <li>User_id=@Model.ID</li>
+        <li>User Name:@Model.USER_NAME</li>
+        <li>Email: @Model.EMAIL</li>
+    </ul>
+}

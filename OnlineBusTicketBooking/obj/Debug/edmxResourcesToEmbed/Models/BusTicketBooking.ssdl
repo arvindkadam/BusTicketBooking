@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BusTicketBookingDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="USER_ADDRESS">
+    <Key>
+      <PropertyRef Name="USER_ADDRESS_ID" />
+    </Key>
+    <Property Name="USER_ADDRESS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADDRESS1" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ADDRESS2" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CITY" Type="varchar" MaxLength="100" />
+    <Property Name="STATE" Type="varchar" MaxLength="100" />
+    <Property Name="ZIP" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="USER_TYPE">
+    <Key>
+      <PropertyRef Name="USER_TYPE_ID" />
+    </Key>
+    <Property Name="USER_TYPE_ID" Type="int" Nullable="false" />
+    <Property Name="USER_TYPE_VALUE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="USER_TYPE_ID" Type="int" />
+    <Property Name="USER_ADDRESS_ID" Type="int" />
+  </EntityType>
+  <Association Name="FK_UserTypeId">
+    <End Role="USER_TYPE" Type="Self.USER_TYPE" Multiplicity="0..1" />
+    <End Role="USERS" Type="Self.USERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER_TYPE">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Principal>
+      <Dependent Role="USERS">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BusTicketBookingDBModelStoreContainer">
+    <EntitySet Name="USER_ADDRESS" EntityType="Self.USER_ADDRESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER_TYPE" EntityType="Self.USER_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_UserTypeId" Association="Self.FK_UserTypeId">
+      <End Role="USER_TYPE" EntitySet="USER_TYPE" />
+      <End Role="USERS" EntitySet="USERS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

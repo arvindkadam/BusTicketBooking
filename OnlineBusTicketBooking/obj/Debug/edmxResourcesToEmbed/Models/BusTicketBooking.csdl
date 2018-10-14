@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BusTicketBookingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="USER_ADDRESS">
+    <Key>
+      <PropertyRef Name="USER_ADDRESS_ID" />
+    </Key>
+    <Property Name="USER_ADDRESS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADDRESS1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDRESS2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ZIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="USER_TYPE">
+    <Key>
+      <PropertyRef Name="USER_TYPE_ID" />
+    </Key>
+    <Property Name="USER_TYPE_ID" Type="Int32" Nullable="false" />
+    <Property Name="USER_TYPE_VALUE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USERS" Relationship="Self.FK_UserTypeId" FromRole="USER_TYPE" ToRole="USERS" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="USER_TYPE_ID" Type="Int32" />
+    <Property Name="USER_ADDRESS_ID" Type="Int32" />
+    <NavigationProperty Name="USER_TYPE" Relationship="Self.FK_UserTypeId" FromRole="USERS" ToRole="USER_TYPE" />
+  </EntityType>
+  <Association Name="FK_UserTypeId">
+    <End Role="USER_TYPE" Type="Self.USER_TYPE" Multiplicity="0..1" />
+    <End Role="USERS" Type="Self.USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER_TYPE">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Principal>
+      <Dependent Role="USERS">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BusTicketBookingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="USER_ADDRESS" EntityType="Self.USER_ADDRESS" />
+    <EntitySet Name="USER_TYPE" EntityType="Self.USER_TYPE" />
+    <EntitySet Name="USERS" EntityType="Self.USER" />
+    <AssociationSet Name="FK_UserTypeId" Association="Self.FK_UserTypeId">
+      <End Role="USER_TYPE" EntitySet="USER_TYPE" />
+      <End Role="USERS" EntitySet="USERS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

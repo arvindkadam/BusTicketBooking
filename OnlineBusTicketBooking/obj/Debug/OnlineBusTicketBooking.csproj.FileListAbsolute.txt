@@ -49,6 +49,8 @@ E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\roslyn\vbc.rsp
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\roslyn\VBCSCompiler.exe
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\roslyn\VBCSCompiler.exe.config
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Antlr3.Runtime.dll
+E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\EntityFramework.dll
+E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\EntityFramework.SqlServer.dll
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Microsoft.AI.Agent.Intercept.dll
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Microsoft.AI.DependencyCollector.dll
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -69,6 +71,8 @@ E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\System.Web.WebPages.Deploy
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\System.Web.WebPages.dll
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\System.Web.WebPages.Razor.dll
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\WebGrease.dll
+E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\EntityFramework.xml
+E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\EntityFramework.SqlServer.xml
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\System.Web.Helpers.xml
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\System.Web.Mvc.xml
 E:\MyWork\BusTicketBooking\OnlineBusTicketBooking\bin\System.Web.Optimization.xml
